@@ -6,7 +6,7 @@
 
 #define LCG63_NORM 1.0842021724855044340074528008699e-19 // 1/2^63
 
-namespace Xvmc
+namespace TOK
 {
     class lcg63
     {

@@ -8,7 +8,7 @@
 
 int main(int argc, char* argv[])
 {
-    Xvmc::lcg63 rng;
+    TOK::lcg63 rng;
 
     Spectrum s("spectrum.dat");
 

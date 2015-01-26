@@ -1,6 +1,6 @@
 #include "lcg63.h"
 
-namespace Xvmc
+namespace TOK
 {
     // In cases where we want to skip backwards, we add the period of the random
     // number generator until the number of random numbers to skip is positive since
