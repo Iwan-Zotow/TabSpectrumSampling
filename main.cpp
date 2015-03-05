@@ -4,7 +4,7 @@
 #include <string>
 
 #include "lcg63.h"
-#include "Spectrum.h"
+#include "Spectrum.hpp"
 
 int main(int argc, char* argv[])
 {

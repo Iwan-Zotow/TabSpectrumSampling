@@ -7,7 +7,7 @@
 #include <string>
 #include <limits>
 
-#include "Spectrum.h"
+#include "Spectrum.hpp"
 
 Spectrum::Spectrum(const char* fname):
     _nof_bins(-1),
