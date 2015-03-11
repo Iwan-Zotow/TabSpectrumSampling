@@ -3,12 +3,14 @@
 #include <iomanip>
 #include <string>
 
-#include "lcg63.h"
+#include "../LCG-PLE63/std_LCG_PLE63.hpp"
+#include "../LCG-PLE63/uniform_distribution.hpp"
 #include "Spectrum.hpp"
 
 int main(int argc, char* argv[])
 {
-    TOK::lcg63 rng;
+    std::linear_congruential_engine<uint64_t, 2806196910506780709ULL, 1ULL, (1ULL<<63ULL)> ugen;
+    std::uniform_distribution<float>                                                       rng;
 
     Spectrum s("spectrum.dat");
 
@@ -31,7 +33,7 @@ int main(int argc, char* argv[])
 
     for(uint64_t k = 0; k != N; ++k)
     {
-        double e = s.sample(rng.number(), rng.number());
+        double e = s.sample(rng(ugen), rng(ugen));
 
         int idx = (std::lower_bound(s.pos().cbegin(), s.pos().cend(), e) - s.pos().cbegin());
         histo[idx] += 1;

@@ -50,7 +50,7 @@ DEFS  :=
 # object files - done by string substitution
 #
 
-SRCS_SPECTR := main.cpp lcg63.cpp Spectrum.cpp
+SRCS_SPECTR := main.cpp Spectrum.cpp
 OBJS_SPECTR := $(addsuffix .o, $(basename $(SRCS_SPECTR)))	
 DEPS_SPECTR := $(addsuffix .d, $(basename $(SRCS_SPECTR)))
 
